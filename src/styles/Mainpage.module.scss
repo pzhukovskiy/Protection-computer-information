@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.header {
+    display: grid;
+    height: 100px;
+    background-color: #B8D8D8;
+}
+
+.header h1 {
+    display: grid;
+    place-items: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.choice {
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
+   margin: 20px 20px 0 0;
+}
+
+.choice_lab {
+    margin: 50px 0 0 50px;
+}
+
+@media (max-width: 900px) {
+    .choice {
+        grid-template-columns: auto auto; 
+     }
+} 
+
+@media (max-width: 600px) {
+    .header h1 {
+        font-size: 28px;
+    }
+}
