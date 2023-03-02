@@ -1,6 +1,5 @@
-import { Button } from "@mui/material";
 import styles from "../styles/Mainpage.module.scss";
-
+import { Outlet, Link } from "react-router-dom";
 
 function Mainpage() {
     const list_lab = [
@@ -26,15 +25,14 @@ function Mainpage() {
                     return (
                         <div key={nameLab.id} className={styles.choice_lab}>
                             <h2>{nameLab.text}</h2>
-                            <Button 
-                                variant="outlined"
-                                onClick={() => console.log(nameLab.id)}>
-                                    Перейти
-                            </Button>
+                            <div className={styles.button_go_to_lab}>
+                                <Link to={`/Lab_${nameLab.id}`}>Перейти</Link>
+                            </div>
                         </div>
                     )
                 })}
             </div>
+            <Outlet/>
         </div>
     )
 }
